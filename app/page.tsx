@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main>
       <section className="boxes-container" ref={container}>
-        <h2>Use the button to toggle a Timeline</h2>
+        <h2>Yarn, Next.js, Vercel</h2>
         <div>
           <button onClick={toggleTimeline}>Toggle Timeline</button>
         </div>
