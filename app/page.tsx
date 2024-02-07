@@ -18,12 +18,11 @@ export default function Home() {
 
   useGSAP(
     () => {
-      const boxes = gsap.utils.toArray('.box');
       tl.current = gsap
         .timeline()
-        .to(boxes[0], { x: 120, rotation: 360 })
-        .to(boxes[1], { x: -120, rotation: -360 }, '<')
-        .to(boxes[2], { y: -166 })
+        .to(".box-1", { x: 120, rotation: 360 })
+        .to(".box-2", { x: -120, rotation: -360 }, '<')
+        .to(".box-3", { y: -166 })
         .reverse();
     },
     { scope: container }
@@ -36,9 +35,9 @@ export default function Home() {
         <div>
           <button onClick={toggleTimeline}>Toggle Timeline</button>
         </div>
-        <div className="box gradient-blue">Box 1</div>
-        <div className="box gradient-blue">Box 2</div>
-        <div className="box gradient-blue">Box 3</div>
+        <div className="box box-1 gradient-blue">Box 1</div>
+        <div className="box box-2 gradient-blue">Box 2</div>
+        <div className="box box-3 gradient-blue">Box 3</div>
       </section>
     </main>
   );
